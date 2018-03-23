@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mhelp"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Item"
+        app:showAsAction="ifRoom|withText" />
+    <item android:title="page1"
+        android:id="@+id/page1" />
+    <item android:title="page2"
+        android:id="@+id/page2" />
+    <item android:title="Show word"
+        android:id="@+id/show_word" />
+</menu>
