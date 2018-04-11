@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import android.content.Context;
@@ -15,6 +18,9 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
+    private Button button01;
     private ClipData.Item op1_text;
 
     private Intent intent;
@@ -23,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        button01 = (Button)findViewById(R.id.button1);
+
+        button01.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //TODO button click
+                intent = new Intent(MainActivity.this, Page1Activity.class);
+                EditText editText = (EditText) findViewById(R.id.edit1);
+                String message = editText.getText().toString();
+                intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
