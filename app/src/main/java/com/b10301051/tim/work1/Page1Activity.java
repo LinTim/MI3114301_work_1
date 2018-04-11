@@ -22,7 +22,7 @@ public class Page1Activity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.textView1);
-        textView.setText(message);
+        textView.setText("B10301051: "+message);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
